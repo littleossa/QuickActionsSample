@@ -20,7 +20,8 @@ class QuickActionState: ObservableObject {
         UIApplication.shared.shortcutItems = shortcutItems
     }
     
-    func selectAction(_ action: QuickAction?) {
+    func selectAction(by shortcutItem: UIApplicationShortcutItem?) {
+        let action = QuickAction(shortcutItem: shortcutItem)
         selectedAction = action
         isEnteredFromQuickAction = action == nil ? false : true
     }

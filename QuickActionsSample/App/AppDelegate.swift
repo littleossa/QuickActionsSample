@@ -13,7 +13,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         
-        quickActionState.selectAction(QuickAction(shortcutItem: options.shortcutItem))
+        quickActionState.selectAction(by: options.shortcutItem)
         
         let configuration = UISceneConfiguration(
             name: connectingSceneSession.configuration.name,

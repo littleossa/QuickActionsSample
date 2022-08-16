@@ -12,7 +12,7 @@ class SceneDelegate: NSObject, UIWindowSceneDelegate {
     private let quickActionState = QuickActionState.shared
 
     func windowScene(_ windowScene: UIWindowScene, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
-        quickActionState.selectAction(QuickAction(shortcutItem: shortcutItem))
+        quickActionState.selectAction(by: shortcutItem)
         completionHandler(true)
     }
 }
